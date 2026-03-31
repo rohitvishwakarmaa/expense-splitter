@@ -1,6 +1,8 @@
 import axios from 'axios';
 
-const BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000/api';
+// Use local URL in development, but fallback to relative URL or a Render placeholder in production
+const isProd = import.meta.env.PROD;
+const BASE_URL = import.meta.env.VITE_API_URL || (isProd ? 'https://your-production-backend.onrender.com/api' : 'http://localhost:8000/api');
 
 const client = axios.create({
   baseURL: BASE_URL,
