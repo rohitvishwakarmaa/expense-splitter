@@ -1,12 +1,22 @@
-# Backend
-venv/
-__pycache__/
-*.pyc
-.env
-.pytest_cache/
+# OS & Editor
+.DS_Store
+.vscode/
+.idea/
 
-# Frontend
+# Backend (FastAPI / Python)
+backend/venv/
+backend/__pycache__/
+backend/*.pyc
+backend/.pytest_cache/
+backend/.env
+
+# Frontend (React / Vite)
 frontend/node_modules/
 frontend/dist/
 frontend/.env
 frontend/.env.local
+frontend/.env.*.local
+frontend/.vercel/
+
+# Misc
+*.log
